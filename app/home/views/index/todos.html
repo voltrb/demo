@@ -1,0 +1,64 @@
+<:title>Todos</:title>
+
+<:body>
+  <h1>Todo App</h1>
+
+  <div class="row todos">
+    <div class="col-md-4 lists">
+      <h1>{_todo_lists.size.in_units_of('List')}</h1>
+
+      <div class="todos">
+        <table class="table">
+        	{#each _todo_lists as todo_list}
+            <tr>
+          		<td><a e-click="set_current_todo(index)">{todo_list._name}</a></td>
+        			<td><button e-click="remove_todo_list(index)">X</button></td>
+            </tr>
+        	{/}
+        </table>
+      </div>
+
+      <form e-submit="add_todo_list">
+      	<p>
+      		<input type="text" value="{_new_todo_list_name}">
+      		<button>Add</button>
+      	</p>
+      </form>
+    </div>
+  
+    <div class="col-md-8 list">
+      <div>
+        <div class="todoCount">{_current_todo._todos.size.in_units_of('item')}</div>
+        <h1>{_current_todo._name}</h1>
+      </div>
+
+      {#if _current_todo._todos.size == 0}
+        <p class="noTodos">No todos, enter them below</p>
+      {/}
+
+      <:todos />
+      
+      <form e-submit="add_todo">
+      	<p>
+      		<input type="text" value="{_new_todo}">
+      		<button>Add</button>
+      	</p>
+      </form>
+    </div>
+  </div>
+</:body>
+
+<:todos>
+  <table class="todos">
+  	{#each _current_todo._todos as todo}
+      <:todo />
+  	{/}
+  </table>
+</:todos>
+
+<:todo>
+  <tr>
+    <td><input type="checkbox" checked="{todo._completed}" /></td>
+  	<td class="{#if todo._completed}completed{/}">{index + 1}. {todo._label}</td>
+  </tr>
+</:todo>

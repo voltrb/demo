@@ -1,0 +1,20 @@
+.todoCount {
+  float: right;
+  font-weight: bold;
+}
+
+.todos {
+   .list {
+     border-left: 1px solid #cccccc;
+   }
+   
+   .noTodos {
+     font-style: italic;
+   }
+   
+   .completed {
+     text-decoration: line-through;
+     color: #cccccc;
+   }
+}
+

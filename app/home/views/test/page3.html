@@ -1,0 +1,18 @@
+<p>
+  <a href="/?controller=test/page3">Page 3</a> | <a href="/?controller=test/page4">Page 4</a>
+</p>
+
+<h1>Page 3</h1>
+
+{#each _list as item}
+  <!-- <p>{item._name}</p> -->
+{/}
+
+<form e-submit="_list << {_name: _new_list.cur}; _new_list.cur = ''">
+	<p>
+		<input type="text" value="{_new_list}">
+		<button>Add</button>
+	</p>
+</form>
+
+<!-- <button e-click="puts m.rm.listeners.inspect">Print</button> -->

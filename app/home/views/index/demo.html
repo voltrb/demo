@@ -1,0 +1,52 @@
+<:title>Demo</:title>
+
+<:body>
+  <style>
+  .cool {
+    font-weight: bold;
+  }
+  </style>
+  
+  <h1>Page 1</h1>
+
+  <p>This is some of the interesting content from page 1.</p>
+
+  <p>
+    <input type="text" value="{params._name}" />
+    <input type="text" value="{params._name}" />
+  </p>
+
+  <p>
+  <a e-click="params._controller='page1'">Page 1</a> | 
+  <a e-click="params._controller='page2'">Page 2</a>
+  </p>
+
+  <p>
+    <input type="checkbox" id="check1" checked="{_cool1}"><label for="check1"> Check 1</label>
+  </p>
+
+  {#if _cool1}
+  Checked
+  {/}
+
+
+
+  <p>
+    <select>
+      <option value="cool">Cool</option>
+      <option value="beans">Beans</option>
+      <option value="dude">Dude</option>
+    </select>
+  </p>
+
+  <br /><br />
+
+  <p>
+    <button e-click="send_message">Send</button>
+  </p>
+
+  <button e-mouseover="self._hover_class='cool'" e-click="self._clicked='yes'" e-mouseout="self._hover_class=''" class="{_hover_class} {_clicked}">Hover Me</button>
+
+  <button e-click="missing_meth">Missing</button>
+  <hr />
+</:body>

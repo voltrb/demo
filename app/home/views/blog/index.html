@@ -1,0 +1,51 @@
+<:title>Blog</:title>
+
+<:body>
+
+
+  <div class="row">
+    <div class="col-md-4">
+      <ul>
+        {#each _posts as post}
+          <li>{post._title}</li>
+        {/}
+      </ul>
+      
+      <p>
+        <button e-click="toggle_comments">Toggle Comments</button>
+      </p>
+    </div>
+    <div class="col-md-8">
+      <h1><:editable_title title="{_blog_name}" /></h1>
+  
+      {#each _posts as post}
+        <h2>{post._title}</h2>
+        <p>{post._body}</p>
+        
+        {#if controller._showing_comments}
+          <:comments show="25" />
+        {/}
+        <hr />
+      {/}
+  
+      <hr />
+      <div class="newPost">
+        <h3>Add Post</h3>
+    
+        <form e-submit="add_post">
+          <p>
+            <label>Title:</label>
+            <input type="text" value="{_new_post._title}" class="{#if _cool_dude._title}cool{/}" />
+          </p>
+          <p>
+            <label>Body:</label>
+            <textarea>{_new_post._body}</textarea>
+          </p>
+      
+          <button>Post</button>
+        </form>
+    
+      </div>
+    </div>
+  </div>
+</:body>
