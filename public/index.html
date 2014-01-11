@@ -2,22 +2,15 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-    <link href="/css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="/css/bootstrap-theme.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="/css/jumbotron.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="/assets/home/css/page2.css" media="all" rel="stylesheet" type="text/css" />
-
 		<script src="/js/jquery-2.0.3.js"></script>
-		<script src="/js/bootstrap.js"></script>
 		<script src="/js/sockjs-0.2.1.min.js"></script>
-    <% if SOURCE_MAPS %>
-      <% @files.each do |file| %>
-        <script src="/assets/<%= file %>?body=1"></script>
-      <% end %>
-    <% else %>
-      <script src="/assets/volt/templates/page.js"></script>
+    <% @javascript_files.each do |javascript_file| %>
+      <script src="<%= javascript_file %>"></script>
     <% end %>
-		<script src="/components/home.js"></script>
+
+    <% @css_files.each do |css_file| %>
+      <link href="<%= css_file %>" media="all" rel="stylesheet" type="text/css" />
+    <% end %>
     
 	</head>
 	<body>
