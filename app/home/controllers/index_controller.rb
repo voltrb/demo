@@ -46,4 +46,8 @@ class IndexController < ModelController
     # _current_todo._todos.count {|v|  r = v._completed == true ; r }
     ReactiveValue.new(5)
   end
+  
+  def send_message
+    channel.send('Cool beans')
+  end
 end
