@@ -14,8 +14,6 @@ class IndexController < ModelController
     20.times do
       self._current_todo._todos << {_label: "Test"}
     end
-    
-    puts "Init done"
   end
   
   def current_template
