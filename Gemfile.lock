@@ -28,7 +28,7 @@ GIT
 PATH
   remote: /Users/ryanstout/Sites/dataframe/parlay
   specs:
-    volt (0.2.3)
+    volt (0.2.7)
       mongo (~> 1.9.0)
       multi_json (~> 1.8.2)
       nokogiri (~> 1.6.0)
