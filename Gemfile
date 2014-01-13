@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'volt', :path => '/Users/ryanstout/Sites/dataframe/parlay'
+gem 'volt', :path => '/Users/ryanstout/Sites/dataframe/volt'
 gem 'volt-bootstrap'
 
 # Needed at the moment
