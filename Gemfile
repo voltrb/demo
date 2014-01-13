@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'volt', :path => '/Users/ryanstout/Sites/dataframe/parlay'
+gem 'volt-bootstrap'
 
 # Needed at the moment
 gem 'opal', git: 'https://github.com/opal/opal.git'
