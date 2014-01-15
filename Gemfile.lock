@@ -25,23 +25,6 @@ GIT
       source_map
       sprockets
 
-PATH
-  remote: /Users/ryanstout/Sites/dataframe/volt
-  specs:
-    volt (0.2.9)
-      mongo (~> 1.9.0)
-      multi_json (~> 1.8.2)
-      nokogiri (~> 1.6.0)
-      oj (~> 2.3.0)
-      pry (~> 0.9.12.0)
-      rack (~> 1.5.0)
-      rake (~> 10.0.4)
-      rspec (= 3.0.0.beta1)
-      sass (~> 3.2.5)
-      sprockets-sass (~> 1.0.0)
-      thin (~> 1.6.0)
-      thor (~> 0.18.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -102,6 +85,19 @@ GEM
       rack (>= 1.0.0)
     thor (0.18.1)
     tilt (1.4.1)
+    volt (0.3.4)
+      mongo (~> 1.9.0)
+      multi_json (~> 1.8.2)
+      nokogiri (~> 1.6.0)
+      oj (~> 2.3.0)
+      pry (~> 0.9.12.0)
+      rack (~> 1.5.0)
+      rake (~> 10.0.4)
+      rspec (= 3.0.0.beta1)
+      sass (~> 3.2.5)
+      sprockets-sass (~> 1.0.0)
+      thin (~> 1.6.0)
+      thor (~> 0.18.0)
     volt-bootstrap (0.0.1)
     websocket-driver (0.3.2)
 
@@ -112,5 +108,5 @@ DEPENDENCIES
   opal!
   opal-jquery!
   sockjs!
-  volt!
+  volt
   volt-bootstrap
