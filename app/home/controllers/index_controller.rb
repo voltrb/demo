@@ -14,6 +14,16 @@ class IndexController < ModelController
     20.times do
       self._current_todo._todos << {_label: "Test"}
     end
+    
+    # store._items.on('added') { puts "ITEMS ADDED" }
+  end
+  
+  def add_items
+    
+    a = store._items.cur
+    a << {_name: 'one'}
+    a << {_name: 'two2'}
+    
   end
   
   def current_template
@@ -46,6 +56,7 @@ class IndexController < ModelController
   end
   
   def send_message
-    channel.send('Cool beans')
+    # channel.send('Cool beans')
+    tasks.call('StoreTasks', 'save', 1,2,3)
   end
 end

@@ -1,7 +1,5 @@
 module CreditCardField
   class IndexController < ModelController
-    attr_reader :data
-    
     def initialize(data)
       super
       
