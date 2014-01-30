@@ -32,11 +32,15 @@
         <h1>{_current_todo._name}</h1>
       </div>
 
+      <p>
+        <input type="checkbox" checked="{_all_checked}" /> All Checked
+      </p>
+
       {#if _current_todo._todos.size == 0}
         <p class="noTodos">No todos, enter them below</p>
       {/}
 
-      <:todos />
+      <:todos current-todo="{_current_todo}" />
       
       <form e-submit="add_todo">
       	<p>
@@ -50,8 +54,8 @@
 
 <:todos>
   <table class="todos">
-  	{#each _current_todo._todos as todo}
-      <:todo />
+  	{#each current_todo._todos as todo}
+      <:todo todo="{todo}" index="{index}" />
   	{/}
   </table>
 </:todos>

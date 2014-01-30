@@ -9,6 +9,7 @@ Database Test
       <tr>
         <td><input type="text" value="{item._name}" /></td>
         <td><input type="checkbox" checked="{item._complete}" /></td>
+        <td><button e-click="remove_item_at(index)">X</button></td>
       </tr>
       {#if true}
       <tr>
@@ -19,6 +20,7 @@ Database Test
             {#each item._lists as list}
               <tr>
                 <td>{list._name}</td>
+                <td><button e-click="item._lists.delete(list);">X</button></td>
               </tr>
             {/}
           </table>

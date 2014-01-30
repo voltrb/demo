@@ -1,7 +1,7 @@
 <:body>
   {#if controller._toggled}
-    <input type="text" e-keypress="title_edit(event)" value="{title}" />
+    <input type="text" e-keypress="title_edit(event)" value="{data.title}" />
   {#else}
-    <span e-click="toggle_editing">{title}</span>
+    <span e-click="toggle_editing">{data.title}</span>
   {/}
 </:body>

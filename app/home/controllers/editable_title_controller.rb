@@ -1,6 +1,12 @@
 class EditableTitleController < ModelController
-  def initialize(*args)
+  model :page
+  
+  attr_reader :data
+  
+  def initialize(data)
     super
+    
+    @data = data
     
     @toggled = ReactiveValue.new(false)
   end

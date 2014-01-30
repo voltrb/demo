@@ -1,7 +1,7 @@
 class IndexController < ModelController
-  def initialize
-    @model = page
-    
+  model :page
+  
+  def initialize    
     self._todo_lists << {_name: 'One', _todos: []}
     self._todo_lists << {_name: 'Two', _todos: []}
     self._todo_lists << {_name: 'Three', _todos: []}
@@ -15,7 +15,23 @@ class IndexController < ModelController
       self._current_todo._todos << {_label: "Test"}
     end
     
+    self._all_checked.on('changed') do
+      check_all(self._all_checked.cur)
+    end
+    
     # store._items.on('added') { puts "ITEMS ADDED" }
+  end
+  
+  def remove_item_at(index)
+    puts "REMOVE AT: #{index.cur}"
+    store._items.delete_at(index.cur)
+  end
+  
+  def check_all(true_false)
+    todos = self._current_todo._todos
+    todos.size.cur.times do |index|
+      todos[index]._completed = true_false
+    end
   end
   
   def add_items

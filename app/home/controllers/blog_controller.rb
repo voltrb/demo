@@ -1,10 +1,19 @@
 class BlogController < ModelController
+  model :page
+  
   def initialize
-    @model = page
-
-    self._blog_name = self._blog_name.or('The Coolz').cur
-    self._blog_name2 = self._blog_name.or('Yes').cur
-    _new_post._title = ''
+    super
+    
+    self._blog_name = 'Test Blog'
+    self._new_post._title = ''
+  end
+  
+  def format_number(number)
+    number.with {|s| s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse }
+  end
+  
+  def format_with_breaks(str)
+    str.gsub("\n", "<br />")
   end
   
   def add_post

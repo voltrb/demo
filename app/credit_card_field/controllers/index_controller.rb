@@ -1,9 +1,12 @@
 module CreditCardField
   class IndexController < ModelController
     def initialize(data)
+      puts "INIT1"
       super
       
       @data = data
+      
+      puts "Data: " + data.inspect
       @input = nil
       @changed_listener = @data.value.on('changed') do
         text = @data.value.cur
