@@ -19,11 +19,17 @@ GIT
 
 GIT
   remote: https://github.com/opal/opal.git
-  revision: d651da39c8fac6b206132b304e23a3abdeb18db0
+  revision: 85220f32136c74ac93f1cb721462324a3423cf44
   specs:
     opal (0.6.0)
       source_map
       sprockets
+
+GIT
+  remote: https://github.com/voltrb/volt-spinner.git
+  revision: 5b99bcd5c016cdaea953a4aa1fd4bc19cbcc086d
+  specs:
+    volt-spinner (0.0.2)
 
 PATH
   remote: /Users/ryanstout/Sites/dataframe/apps/volt-progress-bar
@@ -33,7 +39,7 @@ PATH
 PATH
   remote: /Users/ryanstout/Sites/dataframe/volt
   specs:
-    volt (0.4.14)
+    volt (0.5.13)
       bson_ext (~> 1.9.0)
       listen (~> 2.4.0)
       mongo (~> 1.9.0)
@@ -128,7 +134,8 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    volt-bootstrap (0.0.1)
+    volt-bootstrap (0.0.3)
+    volt-bootstrap-jumbotron-theme (0.0.1)
     websocket-driver (0.3.2)
     yui-compressor (0.12.0)
 
@@ -141,4 +148,6 @@ DEPENDENCIES
   sockjs!
   volt!
   volt-bootstrap
+  volt-bootstrap-jumbotron-theme
   volt-progress-bar!
+  volt-spinner!

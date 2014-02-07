@@ -1,6 +1,9 @@
 <:title>Demo</:title>
 
 <:body>
+
+  <a name="top">Top Anchor</a>
+
   <style>
   .cool {
     font-weight: bold;
@@ -12,6 +15,9 @@
   <:credit_card_field value="{_name}" />
   
   <!-- <:progress-bar /> -->
+  <div style="width: 100px;height: 200px;">
+    <:spinner />
+  </div>
   
   <h1>Demo Page</h1>
 
@@ -24,8 +30,13 @@
 
   <p>
   <a e-click="params._controller='page1'">Page 1</a> | 
-  <a e-click="params._controller='page2'">Page 2</a>
+  <a e-click="params._controller='page2'">Page 2</a> |
+  <a href="#top">Top</a> | <a href="#bottom">Bottom</a>
   </p>
+
+  <a e-click="params._awesome._cool='yes'; params.delete(:_controller)">Test Nested</a><br />
+  <a href="/awesome">Test Nested 2</a>
+  
 
   <p>
     <input type="checkbox" id="check1" checked="{_cool1}"><label for="check1"> Check 1</label>
@@ -34,8 +45,6 @@
   {#if _cool1}
   Checked
   {/}
-
-
 
   <p>
     <select>
@@ -47,6 +56,7 @@
 
   <br /><br />
 
+
   <p>
     <button e-click="send_message">Send</button>
   </p>
@@ -54,5 +64,6 @@
   <button e-mouseover="self._hover_class='cool'" e-click="self._clicked='yes'" e-mouseout="self._hover_class=''" class="{_hover_class} {_clicked}">Hover Me</button>
 
   <button e-click="missing_meth">Missing</button>
+  <a name="bottom">Bottom Anchor</a>
   <hr />
 </:body>

@@ -2,10 +2,19 @@ class BlogController < ModelController
   model :page
   
   def initialize
+    puts "Blog!"
     super
     
     self._blog_name = 'Test Blog'
     self._new_post._title = ''
+  end
+  
+  def dom_ready
+    puts "Blog Dom Ready"
+  end
+  
+  def dom_removed
+    puts "Blog Dom Removed"
   end
   
   def format_number(number)
