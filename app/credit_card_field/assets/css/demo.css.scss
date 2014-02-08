@@ -1,0 +1,69 @@
+*{
+  position:relative;
+  transition-duration: .5s;
+  -webkit-transition-duration: .5s;
+  -webkit-animation: fadein .5s; /* Safari and Chrome */
+     -moz-animation: fadein .5s; /* Firefox */
+      -ms-animation: fadein .5s; /* Internet Explorer */
+       -o-animation: fadein .5s; /* Opera */
+          animation: fadein .5s;
+}
+
+@keyframes fadein {
+  from{ 
+    opacity: 0;
+    left:-1000px;
+  }
+  to{
+    opacity: 1; 
+    left:0px; 
+  }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+  from{ 
+    opacity: 0;
+    left:-1000px;
+  }
+  to{
+    opacity: 1; 
+    left:0px; 
+  }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+  from{ 
+    opacity: 0;
+    left:-1000px;
+  }
+  to{
+    opacity: 1; 
+    left:0px; 
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from{ 
+    opacity: 0;
+    left:-1000px;
+  }
+  to{
+    opacity: 1; 
+    left:0px; 
+  }
+}
+
+/* Opera */
+@-o-keyframes fadein {
+  from{ 
+    opacity: 0;
+    left:-1000px;
+  }
+  to{
+    opacity: 1; 
+    left:0px; 
+  }
+}
