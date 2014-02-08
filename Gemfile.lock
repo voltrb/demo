@@ -39,7 +39,7 @@ PATH
 PATH
   remote: /Users/ryanstout/Sites/dataframe/volt
   specs:
-    volt (0.5.13)
+    volt (0.5.15)
       bson_ext (~> 1.9.0)
       listen (~> 2.4.0)
       mongo (~> 1.9.0)
