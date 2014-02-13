@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/kacperk/sockjs-ruby.git
-  revision: 66e566c51ba60d7b1421b67d2b86f4c389741600
+  revision: 72f715fb3173c44f0ce28a884c62670e6424dbef
   specs:
-    sockjs (0.3.4.3)
+    sockjs (0.3.4.4)
       faye-websocket (~> 0.7.1)
       json
       rack
@@ -12,18 +12,39 @@ GIT
 
 GIT
   remote: https://github.com/opal/opal-jquery.git
-  revision: eab45e24ed1128721395d38d7d4b9e84c4427c00
+  revision: 1814202085f168176231b877b2b7a967b75b0726
   specs:
     opal-jquery (0.1.2)
       opal (>= 0.5.0, < 1.0.0)
 
 GIT
   remote: https://github.com/opal/opal.git
-  revision: 85220f32136c74ac93f1cb721462324a3423cf44
+  revision: 5e73e545e9e6185ec25b8912dfa774cd6b62e87f
   specs:
     opal (0.6.0)
       source_map
       sprockets
+
+PATH
+  remote: /Users/ryanstout/Sites/dataframe/volt
+  specs:
+    volt (0.6.1)
+      bson_ext (~> 1.9.0)
+      listen (~> 2.4.0)
+      mongo (~> 1.9.0)
+      multi_json (~> 1.8.2)
+      nokogiri (~> 1.6.0)
+      oj (~> 2.5.0)
+      pry (~> 0.9.12.0)
+      rack (~> 1.5.0)
+      rake (~> 10.0.4)
+      rspec (= 3.0.0.beta1)
+      sass (~> 3.2.5)
+      sprockets-sass (~> 1.0.0)
+      thin (~> 1.6.0)
+      thor (~> 0.18.0)
+      uglifier (~> 2.4.0)
+      yui-compressor (~> 0.12.0)
 
 GEM
   remote: https://rubygems.org/
@@ -102,23 +123,6 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    volt (0.5.15)
-      bson_ext (~> 1.9.0)
-      listen (~> 2.4.0)
-      mongo (~> 1.9.0)
-      multi_json (~> 1.8.2)
-      nokogiri (~> 1.6.0)
-      oj (~> 2.5.0)
-      pry (~> 0.9.12.0)
-      rack (~> 1.5.0)
-      rake (~> 10.0.4)
-      rspec (= 3.0.0.beta1)
-      sass (~> 3.2.5)
-      sprockets-sass (~> 1.0.0)
-      thin (~> 1.6.0)
-      thor (~> 0.18.0)
-      uglifier (~> 2.4.0)
-      yui-compressor (~> 0.12.0)
     volt-bootstrap (0.0.3)
     volt-bootstrap-jumbotron-theme (0.0.1)
     volt-progress-bar (0.0.1)
@@ -133,7 +137,7 @@ DEPENDENCIES
   opal!
   opal-jquery!
   sockjs!
-  volt
+  volt!
   volt-bootstrap
   volt-bootstrap-jumbotron-theme
   volt-progress-bar

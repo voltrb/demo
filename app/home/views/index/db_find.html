@@ -1,0 +1,31 @@
+<:title>
+DB Find
+</:title>
+
+<:body>
+  <h1>Find</h1>
+  
+  {results.size} - {results.state}
+  
+  <table>
+    {#each results as result}
+      <tr>
+        <td>--{result._name} - {result._id} - {result._complete}</td>
+        <td><input type="text" value="{result._name}" />
+      </tr>
+    {/}
+  </table>
+
+
+  <hr />
+  
+  <table>
+    {#each store._items as result}
+      <tr>
+        <td>--{result._name} - {result.object_id} - {result.reactive?}</td>
+      </tr>
+    {/}
+  </table>
+
+  <input value="{_name_filter}">
+</:body>

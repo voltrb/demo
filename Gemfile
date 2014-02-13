@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'volt'
+gem 'volt', path: '/Users/ryanstout/Sites/dataframe/volt'
 gem 'volt-bootstrap'
 gem 'volt-bootstrap-jumbotron-theme'
 gem 'volt-progress-bar'

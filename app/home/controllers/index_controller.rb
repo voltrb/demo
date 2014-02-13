@@ -18,6 +18,21 @@ class IndexController < ModelController
     self._all_checked.on('changed') do
       check_all(self._all_checked.cur)
     end
+    
+    # @results = store._items.find('$query' => {:_complete => true}, '$orderby' => {:_name => 1})
+    
+    # @results = store._items.find({:_complete => true})
+    
+    @results = store._items.find({:_name => _name_filter})
+    
+    # self._name_filter = '_name'
+    # @results = store._items.find({'$query' => {}, '$orderby' => {_name_filter => -1}})
+    
+    @new_record = ReactiveValue.new(Itemn.new)
+  end
+  
+  def results
+    @results
   end
   
   def clicked(arg)
