@@ -27,8 +27,6 @@ class IndexController < ModelController
     
     # self._name_filter = '_name'
     # @results = store._items.find({'$query' => {}, '$orderby' => {_name_filter => -1}})
-    
-    @new_record = ReactiveValue.new(Itemn.new)
   end
   
   def results

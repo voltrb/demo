@@ -1,6 +1,7 @@
-<:title>Todos</:title>
+<:Title>
+  Todos
 
-<:body>
+<:Body>
   <h1>Todo App</h1>
 
   <div class="row todos">
@@ -50,19 +51,17 @@
       </form>
     </div>
   </div>
-</:body>
 
-<:todos>
+<:Todos>
   <table class="todos">
   	{#each current_todo._todos as todo}
       <:todo todo="{todo}" index="{index}" />
   	{/}
   </table>
-</:todos>
 
-<:todo>
+<:Todo>
   <tr>
     <td><input type="checkbox" checked="{todo._completed}" /></td>
   	<td class="{#if todo._completed}completed{/}">{index + 1}. {todo._label}</td>
   </tr>
-</:todo>
+

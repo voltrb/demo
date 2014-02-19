@@ -1,8 +1,7 @@
-<:title>
+<:Title>
   {#template "home/title"}
-</:title>
 
-<:body>
+<:Body>
   <:volt:notices />
   
   <div class="container">
@@ -14,6 +13,7 @@
         <:nav page="blog" text="Blog" />
         <:nav page="db" text="DB" />
         <:nav page="db_find" text="Find" />
+        <:nav page="items" text="Items" />
         <:nav page="switches" text="Switches" />
       </ul>
       <h3 class="text-muted">Project name</h3>
@@ -26,10 +26,8 @@
     </div>
 
   </div>
-</:body>
 
-<:nav>
+<:Nav>
   <li class="{#if params._controller.or('') == page}active{/}">
     <a href="/{page}">{text}</a>
   </li>
-</:nav>

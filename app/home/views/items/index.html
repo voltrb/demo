@@ -1,7 +1,26 @@
-<:title>
-Items
-</:title>
+<:Title>
+  Items
 
-<:body>
+<:Body>
   <h1>Items</h1>
-</:body>
+  
+  <table class="table">
+    {#each _items as item}
+      <tr>
+        <td>{item._complete}</td>
+        <td>{item._name}</td>
+        <td><button e-click="_items.delete_at(index)">X</button></td>
+      </tr>
+    {/}
+  </table>
+  
+  
+  
+  <form e-submit="add_item">
+    <input type="checkbox" checked="{_new_item._complete}" />
+    <input value="{_new_item._name}" />
+  </form>
+  
+  <button e-click="test1(event)">YEP</button>
+  
+  
