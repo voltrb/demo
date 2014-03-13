@@ -4,7 +4,7 @@ gem 'volt'#, path: '/Users/ryanstout/Sites/volt/volt'
 gem 'volt-bootstrap'
 gem 'volt-bootstrap-jumbotron-theme'
 gem 'volt-progress-bar'
-gem 'volt-spinner'
+gem 'volt-spinner', path: '/Users/ryanstout/Sites/volt/apps/volt-spinner'
 
 gem 'volt-fields'
 

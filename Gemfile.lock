@@ -25,6 +25,11 @@ GIT
       source_map
       sprockets
 
+PATH
+  remote: /Users/ryanstout/Sites/volt/apps/volt-spinner
+  specs:
+    volt-spinner (0.0.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -110,10 +115,9 @@ GEM
       yui-compressor (~> 0.12.0)
     volt-bootstrap (0.0.3)
     volt-bootstrap-jumbotron-theme (0.0.2)
-    volt-editable-text (0.0.4)
+    volt-editable-text (0.0.5)
     volt-fields (0.0.1)
     volt-progress-bar (0.0.1)
-    volt-spinner (0.0.3)
     websocket-driver (0.3.2)
     yui-compressor (0.12.0)
 
@@ -130,4 +134,4 @@ DEPENDENCIES
   volt-editable-text
   volt-fields
   volt-progress-bar
-  volt-spinner
+  volt-spinner!
