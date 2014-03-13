@@ -26,9 +26,11 @@ class IndexController < ModelController
 
     # @results = store._items.find({:_complete => true})
 
-    @results = store._items.find({:_name => _name_filter})
-
     self._new_todo = Todo.new
+  end
+
+  def db_find
+    @results = store._items.find({:_name => _name_filter})
   end
 
   def forms
