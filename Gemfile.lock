@@ -114,7 +114,7 @@ GEM
       uglifier (~> 2.4.0)
       yui-compressor (~> 0.12.0)
     volt-bootstrap (0.0.3)
-    volt-bootstrap-jumbotron-theme (0.0.2)
+    volt-bootstrap-jumbotron-theme (0.0.3)
     volt-editable-text (0.0.5)
     volt-fields (0.0.1)
     volt-progress-bar (0.0.1)
