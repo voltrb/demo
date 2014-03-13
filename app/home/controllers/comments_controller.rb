@@ -1,8 +1,10 @@
 class CommentsController < ModelController
   def initialize(data=nil)
-    if data
-      model(data)
-      puts "init with #{data.inspect} - #{data.locals.inspect}"
-    end
+    model(data) if data
+  end
+
+  def add_comment
+    self.post._comments << controller._comment.cur.attributes
+    controller._comment = {}
   end
 end

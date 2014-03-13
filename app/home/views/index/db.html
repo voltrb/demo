@@ -3,7 +3,7 @@
 
 <:Body>
   <h1>DB Test Page</h1>
-  
+
   <table class="table">
     {#each store._items as item}
       <tr>
@@ -15,7 +15,7 @@
       <tr>
         <td colspan="3">
           <h4>SubList</h4>
-          
+
           <table class="table">
             {#each item._lists as list}
               <tr>
@@ -24,15 +24,15 @@
               </tr>
             {/}
           </table>
-          
+
           <p>
             <form e-submit="item._lists << {_name: page._new_list.cur} ; page._new_list = ''">
               <input type="text" value="{page._new_list}" />
               <button>Add</button>
             </form>
           </p>
-          
-          
+
+
         </td>
       </tr>
       <tr>
@@ -43,12 +43,12 @@
       {/}
     {/}
   </table>
-  
+
   <div>
     <form e-submit="store._items << {_name: page._new_item.cur} ; page._new_item.cur = '' ; puts 'add'">
       <input type="text" value="{page._new_item}" />
       <button>Add</button>
     </form>
   </div>
-  
+
   <button e-click="add_items">Add</button>

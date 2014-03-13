@@ -1,5 +1,6 @@
 class Item < Model
-  def full_name
-    'Mr ' + _name
-  end
+  validate :_name, length: 4
+  # validate :_address, length: 20
+  # validate :_city, length: 5
+
 end

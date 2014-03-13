@@ -1,0 +1,30 @@
+<:Title>
+  Forms
+
+<:Body>
+
+  <style>
+  .cool {
+    font-weight: bold;
+  }
+
+  .error input {
+    border: 2px solid red;
+  }
+
+  .errors {
+    color: red;
+    text-weight: bold;
+  }
+  </style>
+
+
+  {#if _item.marked_errors.any?}
+    <p class="errors">There are {_item.marked_errors.size} errors.</p>
+  {/}
+  <:fields:text value="{_item._name}" />
+  <:fields:text value="{_item._address}" />
+  <:fields:text value="{_item._city}" />
+
+
+

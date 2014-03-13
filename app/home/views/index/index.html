@@ -1,26 +1,27 @@
 <:Title>
-  {#template "home/title"}
+  {#template "home", "title"}
 
 <:Body>
   <:volt:notices />
-  
+
   <div class="container">
     <div class="header">
       <ul class="nav nav-pills pull-right">
-        <:nav page="" text="Home" />
-        <:nav page="demo" text="Demo" />
-        <:nav page="todos" text="Todos" />
-        <:nav page="blog" text="Blog" />
-        <:nav page="db" text="DB" />
-        <:nav page="db_find" text="Find" />
-        <:nav page="items" text="Items" />
-        <:nav page="switches" text="Switches" />
+        <:nav controller="" text="Home" />
+        <:nav controller="demo" text="Demo" />
+        <:nav controller="forms" text="Forms" />
+        <:nav controller="todos" text="Todos" />
+        <:nav controller="blog" text="Blog" />
+        <:nav controller="db" text="DB" />
+        <:nav controller="db_find" text="Find" />
+        <:nav controller="items" text="Items" />
+        <:nav controller="switches" text="Switches" />
       </ul>
       <h3 class="text-muted">Project name</h3>
     </div>
-    
+
     {#template "home"}
-    
+
     <div class="footer">
       <p>&copy; Company 2014</p>
     </div>
@@ -28,6 +29,6 @@
   </div>
 
 <:Nav>
-  <li class="{#if params._controller.or('') == page}active{/}">
-    <a href="/{page}">{text}</a>
+  <li class="{#if params._controller.or('') == @controller}active{/}">
+    <a href="/{@controller}">{@text}</a>
   </li>

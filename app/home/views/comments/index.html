@@ -1,8 +1,13 @@
 <:Body>
 
-  <h1>Comments</h1>
+  <h1>{post._comments.size} Comments</h1>
 
-  <p>Show {show}</p>
+  {#each post._comments as comment}
+    <:comment name="{comment._name}" content="{comment._content}" />
+  {/}
 
-  <:comment title="this is great" content="This is my comment" />
-  <:comment title="I agree" content="this could be really cool" />
+  <form e-submit="add_comment">
+    <input type="text" value="{controller._comment._name}" />
+    <input type="text" value="{controller._comment._content}" />
+    <button>Add</button>
+  </form>

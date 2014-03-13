@@ -26,10 +26,10 @@
       	</p>
       </form>
     </div>
-  
+
     <div class="col-md-8 list">
       <div>
-        <div class="todoCount">{_current_todo._todos.size.in_units_of('item')}</div>
+        <div class="todoCount">{_current_todo._todos.size.in_units_of('item')} - {completed}</div>
         <h1>{_current_todo._name}</h1>
       </div>
 
@@ -42,10 +42,10 @@
       {/}
 
       <:todos current-todo="{_current_todo}" />
-      
+
       <form e-submit="add_todo">
       	<p>
-      		<input type="text" value="{_new_todo}">
+      		<input type="text" value="{_new_todo._label}">
       		<button>Add</button>
       	</p>
       </form>
@@ -54,14 +54,14 @@
 
 <:Todos>
   <table class="todos">
-  	{#each current_todo._todos as todo}
+  	{#each @current_todo._todos as todo}
       <:todo todo="{todo}" index="{index}" />
   	{/}
   </table>
 
 <:Todo>
   <tr>
-    <td><input type="checkbox" checked="{todo._completed}" /></td>
-  	<td class="{#if todo._completed}completed{/}">{index + 1}. {todo._label}</td>
+    <td><input type="checkbox" checked="{@todo._completed}" /></td>
+  	<td class="{#if @todo._completed}completed{/}">{(@index + 1).cur}. {@todo._label.cur}</td>
   </tr>
 
