@@ -10,6 +10,8 @@ gem 'volt-fields'
 
 gem 'volt-editable-text'
 
+gem 'regin', git: 'https://github.com/josh/regin.git'
+
 # Needed at the moment
 gem 'opal', git: 'https://github.com/opal/opal.git'
 gem 'opal-jquery', :git => 'https://github.com/opal/opal-jquery.git'

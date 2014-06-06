@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/josh/regin.git
+  revision: c72a2b4265a6bb3c6eb91d037248d22550ff3300
+  specs:
+    regin (0.3.8)
+
+GIT
   remote: https://github.com/kacperk/sockjs-ruby.git
   revision: 72f715fb3173c44f0ce28a884c62670e6424dbef
   specs:
@@ -66,7 +72,6 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
-    regin (0.3.8)
     rspec (3.0.0.beta1)
       rspec-core (= 3.0.0.beta1)
       rspec-expectations (= 3.0.0.beta1)
@@ -127,6 +132,7 @@ PLATFORMS
 DEPENDENCIES
   opal!
   opal-jquery!
+  regin!
   sockjs!
   volt
   volt-bootstrap
